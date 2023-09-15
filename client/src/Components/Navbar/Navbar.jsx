@@ -6,13 +6,13 @@ import "./navbar.css";
 
 export default function Navbar() {
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:5000/images/"
+  const PF = "https://wanderlust-ilsz.onrender.com/images/"
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
 
-  // const defaultPP = "http://localhost:5000/images/user_1144760.png"
+  // const defaultPP = "https://wanderlust-ilsz.onrender.com/images/user_1144760.png"
 
   return (
     <div className="navbar">
