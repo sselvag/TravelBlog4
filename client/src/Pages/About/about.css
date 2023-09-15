@@ -1,0 +1,43 @@
+.register2 {
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.852),
+        rgba(255, 255, 255, 0.712)
+      ),
+      url("https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
+    background-size: cover;
+}
+  
+.register2Title {
+    font-size: 50px;
+    text-align: center;
+    margin: 10px;
+    font-family: "Lora", serif;
+}
+  
+.register2Form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.aboutDesc {  
+    font-size: 18px;
+    line-height: 25px;
+    padding: 15%;
+    padding-top: 0%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.aboutDesc::first-letter {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+  
