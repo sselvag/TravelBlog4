@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Defining a Mongoose schema for Posts
 const PostSchema = new mongoose.Schema(
   {
     title: {
@@ -13,7 +14,7 @@ const PostSchema = new mongoose.Schema(
     },
     photo: {
       type: String,
-      required: false,
+      required: true,
     },
     username: {
       type: String,

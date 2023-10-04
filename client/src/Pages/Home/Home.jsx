@@ -6,7 +6,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 
-
 export default function Home() {
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();

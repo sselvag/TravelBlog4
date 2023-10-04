@@ -4,9 +4,11 @@ import { Context } from "../../Context/Context";
 import "./navbar.css";
 
 
+
 export default function Navbar() {
   const { user, dispatch } = useContext(Context);
-  const PF = "https://wanderlust-ilsz.onrender.com/images/"
+  const PF = "https://wanderlust-ilsz.onrender.com/images/";
+
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
