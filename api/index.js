@@ -47,27 +47,12 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 
-<<<<<<< HEAD
-=======
-//Default route for the root path
-app.get('/', (req, res) => {
-  res.send('Welcome to the root route');
-});
-
->>>>>>> 2959118 (commented back end)
 // app.listen("5000", () => {
 //   console.log("Backend is running on port 5000.");
 // });
 
-<<<<<<< HEAD
 const port = process.env.PORT || 5000;
 
-=======
-//Determine the port number from environment variables or use the default (5000)
-const port = process.env.PORT || 5000;
-
-//Start Express.js server
->>>>>>> 2959118 (commented back end)
 app.listen(port, () => {
   console.log(`Backend is running on port ${port}.`);
 });
