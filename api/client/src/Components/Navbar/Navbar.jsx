@@ -7,7 +7,7 @@ import "./navbar.css";
 
 export default function Navbar() {
   const { user, dispatch } = useContext(Context);
-  const PF = "https://wanderlust-ilsz.onrender.com/images/";
+  const PF = "https://wanderlustblog-be4280eec6bb.herokuapp.com/images/";
 
 
   const handleLogout = () => {

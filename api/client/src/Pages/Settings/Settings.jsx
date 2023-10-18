@@ -11,7 +11,7 @@ export default function Settings() {
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "https://wanderlust-ilsz.onrender.com/images/"
+  const PF = "https://wanderlustblog-be4280eec6bb.herokuapp.com/images/"
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -47,12 +47,12 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 
-// app.listen("5000", () => {
-//   console.log("Backend is running on port 5000.");
-// });
+app.use(express.static(path.join(_dirname, "/client")));
 
-const port = process.env.PORT || 5000;
+app.get("*", (req, res) => {
+  res.sendFile(path.join(_dirname, '/client/build', 'index.html'))
+});
 
-app.listen(port, () => {
-  console.log(`Backend is running on port ${port}.`);
+app.listen(process.env.PORT || 5000, () => {
+  console.log("Backend is running.");
 });

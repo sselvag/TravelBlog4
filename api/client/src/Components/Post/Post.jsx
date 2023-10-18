@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 export default function Post({ post }) {
-  const PF = "https://wanderlust-ilsz.onrender.com/images/";
+  const PF = "https://wanderlustblog-be4280eec6bb.herokuapp.com/images/";
   return (
     <div className="post">
       {post.photo && <img className="postImg" src={PF + post.photo} alt="Article"/>}
