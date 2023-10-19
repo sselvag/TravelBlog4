@@ -7,7 +7,7 @@ export default function Write() {
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
     const [file, setFile] = useState(null);
-    const [userMessage, setUserMessage] = useState("");
+    // const [userMessage, setUserMessage] = useState("");
     const { user } = useContext(Context);
 
     //Handle form submission
@@ -22,12 +22,12 @@ export default function Write() {
         };
 
         //If no cover image is provided
-        if (!file) {
-            setUserMessage("Please select an image to upload.");
-            return;
-        } else {
-            setUserMessage("");
-        }
+        // if (!file) {
+        //     setUserMessage("Please select an image to upload.");
+        //     return;
+        // } else {
+        //     setUserMessage("");
+        // }
         
         if (file) {
             const data = new FormData();
@@ -50,11 +50,11 @@ export default function Write() {
         {file && (
             <img className="writeImg" src={URL.createObjectURL(file)} alt='Blog Cover'/>
         )}
-        {userMessage && (
+        {/* {userMessage && (
             <span className="userMessage">
                 {userMessage}
             </span>
-        )}
+        )} */}
         <form className="writeForm" onSubmit={handleSubmit}>
             <div className="writeFormGroup">
                 {/* Cover Image Icon*/}
@@ -66,6 +66,7 @@ export default function Write() {
                     id="fileInput" 
                     style={{ display: "none" }} 
                     onChange={(e) => setFile(e.target.files[0])}
+                    required
                 />
                 {/* Title */}
                 <input 
