@@ -30,7 +30,6 @@ export default function Write() {
         }
         
         if (file) {
-            setUserMessage("");
             const data = new FormData();
             const filename = Date.now() + file.name;
             data.append("name", filename);

@@ -14,7 +14,7 @@ export default function Navbar() {
     dispatch({ type: "LOGOUT" });
   };
 
-  // const defaultPP = "https://wanderlust-ilsz.onrender.com/images/user_1144760.png"
+  const defaultPP = "https://wanderlustblog-be4280eec6bb.herokuapp.com/images/user_1144760.png"
 
   return (
     <div className="navbar">
