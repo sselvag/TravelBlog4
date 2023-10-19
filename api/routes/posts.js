@@ -53,14 +53,14 @@ router.delete("/:id", async (req, res) => {
     if (post.username === req.body.username) {
       try {
         //Delete post from db
-        await post.delete();
+        await post.remove();
         res.status(200).json("Post has been deleted...");
       } catch (err) {
         res.status(500).json(err);
       }
     } else {
       //Deny access if the username does not match
-      res.status(401).json("You can delete only your post!");
+      res.status(401).json("You can only delete your posts!");
     }
   } catch (err) {
     res.status(500).json(err);

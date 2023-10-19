@@ -47,12 +47,15 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 
+//Serves the files from the build directory
 app.use(express.static(path.join(__dirname, "/client/build")));
 
+//Serves the index.html file from the client side
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
 
+//Start the Express server
 app.listen(process.env.PORT || 5000, () => {
   console.log("Backend is running.");
 });

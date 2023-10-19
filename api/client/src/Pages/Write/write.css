@@ -9,6 +9,10 @@
     border-radius: 10px;
     object-fit: cover;
 }
+
+.userMessage {
+    color: red;
+}
   
 .writeForm {
     position: relative;
@@ -48,6 +52,7 @@
 .writeText {
     width: 70vw;
     font-size: 20px;
+    height: fit-content(70vh);
 }
   
 .writeSubmit {

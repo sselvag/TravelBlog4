@@ -9,15 +9,19 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
+  //Handle form submission
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
     setError(false);
     try {
+      //Send a POST request to the register endpoint
       const res = await axiosInstance.post("/auth/register", {
         username,
         email,
         password,
       });
+      //Direct to login page if successfully registered
       res.data && window.location.replace("/login");
     } catch (err) {
       setError(true);
@@ -27,8 +31,11 @@ export default function Register() {
   
   return (
     <div className="register">
+      {/* Title */}
       <span className="registerTitle">Register</span>
+      {/* Form */}
       <form className="registerForm" onSubmit={handleSubmit}>
+        {/* Username */}
         <label>Username</label>
         <input 
           type="text" 
@@ -36,6 +43,7 @@ export default function Register() {
           placeholder="Enter your username..."
           onChange={(e) => setUsername(e.target.value)}
         />
+        {/* Email */}
         <label>Email</label>
         <input 
           type="text" 
@@ -43,6 +51,7 @@ export default function Register() {
           placeholder="Enter your email..."
           onChange={(e) => setEmail(e.target.value)}
         />
+        {/* Password */}
         <label>Password</label>
         <input 
           type="password" 
@@ -50,8 +59,10 @@ export default function Register() {
           placeholder="Enter your password..." 
           onChange={(e) => setPassword(e.target.value)}
         />
+        {/* Register Button */}
         <button className="registerButton" type="submit">Register</button>
       </form>
+      {/* Login Button to direct to Login page */}
       <button className="registerLoginButton">
         <Link className="link" to="/login">Login</Link>
       </button>
