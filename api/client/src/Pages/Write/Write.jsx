@@ -7,7 +7,7 @@ export default function Write() {
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
     const [file, setFile] = useState(null);
-    // const [userMessage, setUserMessage] = useState("");
+    const [userMessage, setUserMessage] = useState("");
     const { user } = useContext(Context);
 
     //Handle form submission
