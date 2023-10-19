@@ -21,15 +21,16 @@ export default function Write() {
             desc,
         };
 
-        //If no cover image is provided
-        // if (!file) {
-        //     setUserMessage("Please select an image to upload.");
-        //     return;
-        // } else {
-        //     setUserMessage("");
-        // }
+        // If no cover image is provided
+        if (!file) {
+            setUserMessage("Please select an image to upload.");
+            return;
+        } else {
+            setUserMessage("");
+        }
         
         if (file) {
+            setUserMessage("");
             const data = new FormData();
             const filename = Date.now() + file.name;
             data.append("name", filename);
@@ -50,11 +51,11 @@ export default function Write() {
         {file && (
             <img className="writeImg" src={URL.createObjectURL(file)} alt='Blog Cover'/>
         )}
-        {/* {userMessage && (
+        {userMessage && (
             <span className="userMessage">
                 {userMessage}
             </span>
-        )} */}
+        )}
         <form className="writeForm" onSubmit={handleSubmit}>
             <div className="writeFormGroup">
                 {/* Cover Image Icon*/}
@@ -81,7 +82,7 @@ export default function Write() {
                 {/* Blog Post Area */}
                 <textarea 
                     placeholder="Share your story..."
-                    // type="text" 
+                    type="text" 
                     className="writeInput writeText"
                     onChange={e=>setDesc(e.target.value)}
                 />
