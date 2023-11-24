@@ -39,5 +39,21 @@ This project was built with the following frameworks and libraries:
   * Bcrypt
   * Multer
 
+## Install
+To clone and run this application, you will need to Git and Node.js installed on your computer.
+From your command line:
+
+ Clone this repository
+ <pre>$ git clone https://github.com/sselvag/TravelBlog4.git</pre>
+
+ Go into the repository
+ <pre>$ cd wanderlustProject</pre>
+
+ Install Dependencies
+ <pre>$ npm install</pre>
+
+ Run the app
+ <pre>$ npm start</pre>
+
 ## Link
 Deployed Application: https://wanderlustblog-be4280eec6bb.herokuapp.com/
